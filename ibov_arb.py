@@ -194,7 +194,7 @@ def get_interp_DI_FACTOR(DI1_ticker, DI2_ticker, first_leg, second_leg, dist_exp
     final_value = (final_value/100)
 
     if method == "normal":
-        final_value = ((1 + final_value) ** (second_leg/252))
+        final_value = ((1 + final_value) ** (dist_expiry/252))
 
     if method == "continuous":
         final_value = np.exp(final_value * (dist_expiry/252))
